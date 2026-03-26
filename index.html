@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HyperBoosters</title>
+
+<style>
+:root {
+  --gold: #d4a373;
+  --black: #000;
+  --white: #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+}
+
+/* TOPO */
+.topo {
+  width: 100%;
+  height: 120px;
+  background: black;
+  border-bottom: 3px solid var(--gold);
+}
+
+/* CONTAINER CENTRAL */
+.wrapper {
+  width: 100%;
+  max-width: 420px;
+  margin-top: -60px;
+  padding: 15px;
+}
+
+/* CARD */
+.card {
+  background: white;
+  border-radius: 18px;
+  padding: 20px;
+  border: 1px solid rgba(212,163,115,0.4);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+/* FOTO */
+.photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--gold);
+  margin-top: -60px;
+  background: white;
+}
+
+/* TITULO */
+.title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.subtitle {
+  color: #777;
+  font-size: 14px;
+}
+
+/* AÇÕES (Ligar, Email, etc) */
+.actions {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.action-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  text-decoration: none;
+  color: black;
+}
+
+.action-btn i {
+  font-size: 22px;
+}
+
+/* TEXTO */
+.texto {
+  font-size: 13px;
+  color: #444;
+  line-height: 1.5;
+  margin: 20px 0;
+}
+
+/* BOTÕES PRINCIPAIS */
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* 👈 força tudo pra esquerda */
+
+  background: black;
+  color: white;
+  text-decoration: none;
+  padding: 14px 18px;
+  border-radius: 10px;
+  margin: 10px 0;
+  border: 1px solid var(--gold);
+  font-weight: bold;
+  transition: 0.3s;
+  gap: 12px; /* espaço entre ícone e texto */
+}
+.btn:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
+}
+
+
+.btn-save {
+  display: inline-block;
+  background: black;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 20px;
+  font-size: 13px;
+  text-decoration: none;
+  margin-top: 10px;
+  border: 1px solid #d4a373;
+  transition: 0.3s;
+}
+
+.btn-save:hover {
+  background: #111;
+  transform: scale(1.05);
+}
+
+.btn i {
+  font-size: 18px;
+  width: 20px; /* 🔥 deixa todos alinhados certinho */
+  justify-content: flex-start; /* 👈 força tudo pra esquerda */
+  text-align: left ;
+ }
+
+/* RESPONSIVO */
+.actions {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap; /* 🔥 impede quebrar linha */
+  gap: 10px;
+  }
+}
+</style>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+</head>
+
+<body>
+
+<div style="width:100%">
+  
+  <!-- TOPO -->
+  <div class="topo"></div>
+
+  <!-- CONTEÚDO -->
+  <div class="wrapper">
+
+    <div class="card">
+
+      <!-- FOTO -->
+      <img src="raoni.jpg" class="photo">
+
+      <!-- TITULO -->
+      <div class="title">Raoni Barbalho</div>
+      <div class="subtitle">CEO & Founder</div>
+
+      <!-- BOTÃO SALVAR CONTATO -->
+      <a class="btn-save" href="raoni.vcf" download> Salvar na agenda </a>
+
+
+      <!-- AÇÕES -->
+      <div class="actions">
+         <a class="action-btn" href="tel:+5538984064396">
+            <i class="fa-solid fa-phone"></i>
+            <span>Ligar</span>
+         </a>
+
+         <a class="action-btn" href="mailto:contato@hyperboosters.com">
+            <i class="fa-solid fa-envelope"></i>
+            <span>Email</span>
+         </a>
+
+         <a class="action-btn" href="https://wa.me/5538984064396">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>WhatsApp</span>
+         </a>
+
+         <a class="action-btn" href="https://maps.google.com/?q=Montes+Claros+MG">
+            <i class="fa-solid fa-map-location-dot"></i>
+            <span>Mapa</span>
+         </a>
+      </div>
+
+      <!-- TEXTO -->
+      <div class="texto">
+        <strong>HyperBoosters</strong><br><br>
+        Seu primeiro sistema de agentes digitais para atender, vender e operar com mais clareza.<br><br>
+
+        A HyperBoosters organiza agentes, configurações e canais em uma jornada guiada de compra e implantação. Você sai do caos de ferramentas soltas e entra em uma plataforma com narrativa comercial, suporte e operação mais coerentes.
+      </div>
+
+      <!-- BOTÕES -->
+      <a class="btn" href="https://instagram.com/hyperboostersbr">
+         <i class="fa-brands fa-instagram"></i> 
+         <span>Instagram</span>
+      </a>
+
+      <a class="btn" href="https://www.linkedin.com/in/raoni-barbalho-9064b0a4">
+         <i class="fa-brands fa-linkedin"></i> 
+         <span>Linkedin</span>
+      </a>
+
+
+      <a class="btn" href="https://www.hyperboosters.com">
+         <i class="fa-solid fa-globe"></i>
+         <span>Site</span>
+      </a>
+
+      <a class="btn" href="https://facebook.com/hyperboosters">
+         <i class="fa-brands fa-facebook"></i>
+         <span>Facebook</span>
+      </a>
+
+      <a class="btn" href="mailto:contato@hyperboosters.com">
+         <i class="fa-solid fa-envelope"></i> 
+         <span>Email</span>
+      </a>
+
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>
