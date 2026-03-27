@@ -162,8 +162,38 @@ body {
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-
 </head>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+    (function(){
+      emailjs.init("3OEvMYYbiwk2ue_Tq");
+    })();   
+    function enviarEmail(nome, telefone, email) {
+
+  emailjs.send("service_wonfeee", "template_fspmac4", {
+    from_name: nome,
+    from_email: email,
+    telefone: telefone
+  })
+  .then(function(response) {
+     console.log("SUCESSO!", response.status, response.text);
+
+     // baixar vcf depois
+     const link = document.createElement('a');
+     link.href = 'raoni.vcf';
+     link.download = 'raoni.vcf';
+     link.click();
+
+  }, function(error) {
+     console.log("ERRO...", error);
+     alert("Erro ao enviar");
+  });
+
+}
+</script>
+
+  
 
 <body>
 
@@ -185,7 +215,8 @@ body {
       <div class="subtitle">CEO & Founder</div>
 
       <!-- BOTÃO SALVAR CONTATO -->
-      <a class="btn-save" href="raoni.vcf" download> Salvar na agenda </a>
+      <button class="btn-save" onclick="enviarEmail(nome, telefone, email);">Salvar na agenda</button>
+      <!--<a class="btn-save" href="raoni.vcf" download> Salvar na agenda </a>
 
 
       <!-- AÇÕES -->
